@@ -98,9 +98,7 @@ func (d *Daemon) RunTranscriptsOnce(ctx context.Context) error {
 	}
 
 	v := validator.NewValidator(
-		*v1PublicKey,
-		validator.WithMaxUncompressedSize(10*1024*1024*1024*1024*1024*1024*1024),
-		validator.WithMaxIndividualFileSize(100*1024*1024*1024*1024*1024*1024),
+		*v1PublicKey
 	)
 
 	for object := range objectCh {
